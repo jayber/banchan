@@ -22,7 +22,7 @@ defmodule BanchanWeb.Components.Button do
         "btn-loadable",
         "text-center",
         "py-1",
-        "px-5 m-1",
+        "px-5",
         @class,
         "btn-primary": @primary
       }

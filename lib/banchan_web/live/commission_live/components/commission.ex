@@ -14,6 +14,7 @@ defmodule BanchanWeb.CommissionLive.Components.Commission do
   alias BanchanWeb.Components.Form.{Submit, TextInput}
 
   alias BanchanWeb.CommissionLive.Components.{
+    ActionBox,
     BalanceBox,
     CommentBox,
     InvoiceCollapse,
@@ -217,7 +218,7 @@ defmodule BanchanWeb.CommissionLive.Components.Commission do
               class="rounded-box hover:bg-base-200 p-2 transition-all"
             />
             <div class="divider" />
-            <StatusBox id={@id <> "-status-box"} />
+            <StatusBox />
             <div class="divider" />
             <div class="text-lg font-medium">Summary</div>
             <BalanceBox
@@ -243,6 +244,7 @@ defmodule BanchanWeb.CommissionLive.Components.Commission do
             <Timeline users={@users} report_modal_id={@id <> "-report-modal"} />
             <div class="divider" />
             <div class="flex flex-col gap-4">
+              <ActionBox id={@id <> "-action-box"} />
               <CommentBox id={@id <> "-comment-box"} />
             </div>
             {bottom_buttons(assigns, false)}
